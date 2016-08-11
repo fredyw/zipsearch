@@ -60,7 +60,7 @@ func main() {
 	validateArgs()
 	regex, e := regexp.Compile(os.Args[2])
 	if e != nil {
-		fmt.Errorf("Error: invalid regular expression: %s", os.Args[2])
+		fmt.Printf("Error: invalid regular expression: %s", os.Args[2])
 		os.Exit(1)
 	}
 	filepath.Walk(os.Args[1],
